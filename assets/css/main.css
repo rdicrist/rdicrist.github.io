@@ -3801,13 +3801,13 @@ input, select, textarea {
 
 	/* Mobile */
 	@media screen and (max-width: 736px) {
-		.wrapper:before {
+		/* .wrapper:before {
 			content: " ";
 			display: block;
 			visibility: hidden;
 			margin-top: -3.5em;
 			height: 3.5em;
-		}
+		} */
 
 		/* #sidebar {
 			display: none;
