@@ -6,14 +6,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-.wrapper:before {
-    content: " ";
-    display: block;
-    visibility: hidden;
-    margin-top: -3.5em;
-    height: 3.5em;
-}
-
 html, body, div, span, applet, object,
  h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3806,8 +3798,16 @@ input, select, textarea {
 		display: none;
 	}
 
+
 	/* Mobile */
 	@media screen and (max-width: 736px) {
+		.wrapper:before {
+			content: " ";
+			display: block;
+			visibility: hidden;
+			margin-top: -3.5em;
+			height: 3.5em;
+		}
 
 		/* #sidebar {
 			display: none;
