@@ -121,6 +121,8 @@
 				if ($window.width() < 1281)
 					return $sidebar.height();
 
+				return 0;
+
 			}
 		});
 
