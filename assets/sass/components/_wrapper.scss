@@ -93,13 +93,13 @@
 				opacity: 1.0;
 			}
 
-			&.inactive,
-			body.is-preload & {
-				> .inner {
-					opacity: 0;
-					@include vendor('transform', 'translateY(1em)');
-				}
-			}
+			// &.inactive,
+			// body.is-preload & {
+			// 	> .inner {
+			// 		opacity: 0;
+			// 		@include vendor('transform', 'translateY(1em)');
+			// 	}
+			// }
 		}
 
 		&.fade-down {
