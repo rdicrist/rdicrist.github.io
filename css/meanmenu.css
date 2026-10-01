@@ -44,10 +44,12 @@
      width: 100%;
 }
  .mean-container .mean-nav ul {
-     padding: 0;
-     margin: 0;
-     width: 100%;
-     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+    max-height: fit-content;
+
 }
  .mean-container .mean-nav ul li {
      position: relative;
