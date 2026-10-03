@@ -15,19 +15,24 @@ const fs = require('fs');
 const path = require('path');
 
 (async () => {
-  const results = await fetchImageUrls('https://photos.app.goo.gl/xHDn3PftZaL78Ua17');
+    const results = await fetchImageUrls('https://photos.app.goo.gl/xHDn3PftZaL78Ua17');
 
-  if (!fs.existsSync('images')) fs.mkdirSync('images');
+//   if (!fs.existsSync('images')) fs.mkdirSync('images');
 
-  const localPaths = [];
-  for (let i = 0; i < results.length; i++) {
-    const res = await axios.get(results[i].url + '=w1000', { responseType: 'arraybuffer' });
-    const filename = `images/google-photos/photo_${i}.jpg`;
-    fs.writeFileSync(filename, res.data);
-    localPaths.push(filename);
-    console.log(`Downloaded ${i + 1}/${results.length}`);
-  }
 
-  fs.writeFileSync('images.json', JSON.stringify({ images: localPaths }, null, 2));
-  console.log(`Done. Wrote ${localPaths.length} local images.`);
+    if (!fs.existsSync('images/google-photos')) {
+        fs.mkdirSync('images/google-photos', { recursive: true });
+    }
+
+    const localPaths = [];
+    for (let i = 0; i < results.length; i++) {
+        const res = await axios.get(results[i].url + '=w1000', { responseType: 'arraybuffer' });
+        const filename = `images/google-photos/photo_${i}.jpg`;
+        fs.writeFileSync(filename, res.data);
+        localPaths.push(filename);
+        console.log(`Downloaded ${i + 1}/${results.length}`);
+    }
+
+    fs.writeFileSync('images.json', JSON.stringify({ images: localPaths }, null, 2));
+    console.log(`Done. Wrote ${localPaths.length} local images.`);
 })();   
