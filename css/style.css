@@ -1456,8 +1456,16 @@ ul.locat_icon li a{
      background-size: 100% 100%;
      background-repeat: no-repeat;
      background-position: center center;
-     padding: 115px 0px;
+     /* padding: 115px 0px; */
+     padding: 15px;
 }
+
+/* @media screen and (max-width: 600px) {
+  .about {
+    padding: 15px;
+  }
+} */
+
  .aboutheading {
     text-align: center;
     padding-bottom: 50px;
@@ -1493,6 +1501,12 @@ ul.locat_icon li a{
      color: #141012;
      
 }
+
+.about .about-box h2 {
+    text-align: center;
+    color: #25813A;;
+}
+
  .about .about-box a{
      /* width: 200px; */
      font-size: 17px;
@@ -1827,6 +1841,12 @@ ul.location_icon li a{
 }
 
 header {
+    position: sticky; 
+    top: 0;
+    z-index: 999;
+}
+
+.header {
     position: sticky; 
     top: 0;
     z-index: 999;
