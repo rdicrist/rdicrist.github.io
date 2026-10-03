@@ -21,6 +21,17 @@
  * {
      box-sizing: border-box !important;
 }
+
+html {
+  scroll-padding-top: 90px; /* = your header height */
+}
+
+@media screen and (max-width: 600px) {
+    html {
+    scroll-padding-top: 125px; /* = your header height */
+    }
+}
+
  body {
      color: #666666;
      font-size: 14px;
