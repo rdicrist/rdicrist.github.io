@@ -25,6 +25,7 @@ const path = require('path');
         console.log(`Downloaded ${i + 1}/${results.length}`);
     }
 
+    // writes the image paths to images.json file
     fs.writeFileSync('images.json', JSON.stringify({ images: localPaths }, null, 2));
     console.log(`Done. Wrote ${localPaths.length} local images.`);
 })();   
