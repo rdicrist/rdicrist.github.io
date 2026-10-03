@@ -35,9 +35,6 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-
-      <!-- imgur iframe -->
-      <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
    </head>
 
    <!-- body -->
@@ -165,23 +162,11 @@
                </div>
                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
 
-                  <!-- possibility -->
-                  <!-- <blockquote class="imgur-embed-pub" lang="en" data-id="a/Dd2A0uQ" data-context="false" >
-                     <a href="//imgur.com/a/Dd2A0uQ">FONEL</a>
-                  </blockquote> -->
-                  
-
                   <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
-                     <div class="carousel-inner" id="imgur-img-carousel">
+                     <div class="carousel-inner" id="google-img-carousel">
                         <div class="carousel-item active">
                            <img class="first-slide" src="images/banner.jpg" alt="First slide">
                         </div>
-                        <!-- <div class="carousel-item">
-                           <img class="second-slide" src="images/banner.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                           <img class="third-slide" src="images/banner.jpg" alt="Third slide">
-                        </div> -->
                      </div>
                      <!-- controls start -->
                      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -252,7 +237,6 @@
             $(this).addClass('active');
          });   
 
-         // imgur-img-carousel
          $(function() {
             $.getJSON('images.json')
             .done(function(data) {
@@ -262,7 +246,7 @@
                      src += '.jpg';
                   }
 
-                  $('#imgur-img-carousel')
+                  $('#google-img-carousel')
                      .append(`
                         <div class="carousel-item">
                            <img src="${src}" alt="Image slide" loading="lazy" style="width: 100%; height:100%;">
@@ -271,7 +255,7 @@
                });
             })
             .fail(function() {
-               $('#imgur-img-carousel').text('Failed to load images.');
+               $('#google-img-carousel').text('Failed to load images.');
             });
          });
 
