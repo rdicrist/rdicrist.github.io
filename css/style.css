@@ -1845,10 +1845,16 @@ ul.location_icon li a{
  
 /** slider arrow **/
  
-.icon-list {
+/* .icon-list {
     float: inline-end;
-    /* width: 100%; */
+    width: 100%;
 
+} */
+.icon-list {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
 }
 
 header {
