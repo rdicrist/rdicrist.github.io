@@ -238,8 +238,16 @@
     .button_section {
         padding-top: 10px;
     }
-    ul.locat_icon {
+    /* ul.locat_icon {
         display: none;
+    } */
+    .icon-list {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mobile-padding {
+        padding-top: 15px;
     }
     .about .about-box {
         margin-bottom: 20px;
@@ -274,8 +282,17 @@
         text-align: center;
         padding-bottom: 11px;
     }
-    ul.locat_icon {
+    /* ul.locat_icon {
         display: none;
+        display: grid;
+    } */
+    .icon-list {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mobile-padding {
+        padding-top: 15px;
     }
     .header {
         position: inherit;
